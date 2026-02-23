@@ -1,0 +1,9 @@
+test12:RNN文本分类任务
+	 使用Pytorch构建一个循环神经网络（RNN）,用于文本分类任务（如LMDB电影评论情感分析、二分类：正面/负面）。
+	请写出数据加载、模型定义、训练、评估的核心代码。
+
+	核心代码说明：
+	数据加载：使用torchtext加载IMDB，分词，构建词汇表，生成批处理数据，使用torch.nn.utils.rnn.pad_sequence等。
+	模型定义：Embedding + RNN/LSTM/GRU + Linear + Softmax（实际上二分类用Sigmoid或LogSoftmax，或者直接用线性层输出logits，用CrossEntropyLoss或BCEWithLogitsLoss）。
+	训练：循环，前向，损失计算，反向传播，优化器。
+	评估：计算准确率
